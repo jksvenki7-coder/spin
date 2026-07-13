@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>V3 Spin & Win</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+.container{
+
+width:100%;
+max-width:420px;
+
+text-align:center;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:700;
+
+color:#fff;
+
+margin-bottom:8px;
+
+}
+
+.subtitle{
+
+color:#cbd5e1;
+
+margin-bottom:20px;
+
+}
+
+.wheel-box{
+
+position:relative;
+
+width:340px;
+
+height:340px;
+
+margin:auto;
+
+}
+
+.pointer{
+
+position:absolute;
+
+left:50%;
+
+top:-15px;
+
+transform:translateX(-50%);
+
+width:0;
+
+height:0;
+
+border-left:18px solid transparent;
+
+border-right:18px solid transparent;
+
+border-top:35px solid gold;
+
+z-index:100;
+
+filter:drop-shadow(0 0 10px gold);
+
+}
+
+#wheel{
+
+width:340px;
+
+height:340px;
+
+border-radius:50%;
+
+border:12px solid #fff;
+
+box-shadow:
+0 0 25px rgba(255,255,255,.4),
+0 20px 50px rgba(0,0,0,.5);
+
+transition:transform 8s cubic-bezier(.17,.67,.2,1);
+
+background:
+conic-gradient(
+
+#ff3b30 0deg 40deg,
+
+#34c759 40deg 80deg,
+
+#ff9500 80deg 120deg,
+
+#007aff 120deg 160deg,
+
+#ffd60a 160deg 200deg,
+
+#af52de 200deg 240deg,
+
+#8e8e93 240deg 280deg,
+
+#ff2d55 280deg 320deg,
+
+#5ac8fa 320deg 360deg
+
+);
+
+}
+
+.center{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:90px;
+
+height:90px;
+
+background:#fff;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:700;
+
+font-size:18px;
+
+color:#007aff;
+
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+background:#00c853;
+
+color:#fff;
+
+font-size:20px;
+
+font-weight:700;
+
+cursor:pointer;
+
+box-shadow:0 15px 30px rgba(0,200,83,.35);
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+#result{
+
+margin-top:25px;
+
+color:#fff;
+
+font-size:22px;
+
+font-weight:700;
+
+min-height:35px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+
+V3 GROUP OF BUSINESS
+
+</div>
+
+<div class="subtitle">
+
+Spin & Win
+
+</div>
+
+<div class="wheel-box">
+
+<div class="pointer"></div>
+
+<div id="wheel">
+
+<div class="center">
+
+SPIN
+
+</div>
+
+</div>
+
+</div>
+
+<button id="spinBtn">
+
+SPIN NOW
+
+</button>
+
+<div id="result"></div>
